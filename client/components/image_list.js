@@ -8,9 +8,12 @@ const IMAGES = [
   { title: 'Mug', link: 'http://dummyimage.com/600x400' }
 ];
 
-const ImageList = () => {
-  const RenderedImages = IMAGES.map(image => {
-    return <ImageDetail key={image.title} source={image.link} title={image.title} />;
+const ImageList = (props) => {
+  const RenderedImages = props.images.map(image => {
+    return <ImageDetail key={image.title} 
+                        source={image.link} 
+                        title={image.title} 
+           />;
   });
 
   return (
